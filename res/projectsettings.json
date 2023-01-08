@@ -1,0 +1,20 @@
+{
+  "windowName": "RogueLike",
+  "windowWidth": 800,
+  "windowHeight": 600,
+
+  "spriteSize": 16,
+
+  "tilePath": "../res/tile_set.png",
+  "mapPath": "../res/map.txt",
+
+  "objects": {
+    "empty": ".",
+    "wall": "#",
+    "player": "P",
+    "monster": "M",
+    "archer": "A",
+    "heal": "+",
+    "sword": "!"
+  }
+}
