@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\C++Projects\RogueLikeConsoleGame\SFML-2.5.1\include;C:\C++Projects\RogueLikeConsoleGame\RogueLikeConsoleGame\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\C++Projects\RogueLikeConsoleGame\SFML-2.5.1\include;C:\C++Projects\RogueLikeConsoleGame\RogueLikeConsoleGame</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

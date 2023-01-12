@@ -15,16 +15,14 @@ class Archer;
 
 class GameObject {
 public:
-    GameObject(const Transform& position, const std::shared_ptr<sf::Sprite> sprite,
-        const int& health, const int& damage);
+    GameObject(const Transform& position, const std::shared_ptr<sf::Sprite> sprite, const int& health, const int& damage);
     void draw(sf::RenderWindow& window);
     Transform getPosition();
     int getHealth();
     int getDamage();
     void hit(const int& damage);
     void changeDamage(const int& damage);
-    virtual void move(const Transform& targetPosition, std::vector<std::shared_ptr<GameObject>>& gameObjects,
-        const std::vector<std::string> map) = 0;
+    virtual void move(const Transform& targetPosition, std::vector<std::shared_ptr<GameObject>>& gameObjects, const std::vector<std::string> map) = 0;
     // true - object can move to this point | false - can't
     virtual bool collide(GameObject& gameObject) = 0;
     virtual bool collide(Player& player) = 0;
