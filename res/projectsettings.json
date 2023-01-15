@@ -1,14 +1,15 @@
 {
   "windowName": "RogueLike",
-  "windowWidth": 800,
-  "windowHeight": 600,
+  "windowWidth": 1024,
+  "windowHeight": 720,
 
   "spriteSize": 16,
 
   "tilePath": "../res/tile_set.png",
   "mapPath": "../res/map.txt",
+  "fontPath": "../res/font.ttf",
 
-  "objects": {
+  "gameObjects": {
     "empty": ".",
     "wall": "#",
     "player": "P",

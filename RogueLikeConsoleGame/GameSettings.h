@@ -26,8 +26,8 @@ public:
         fontPath = root.get<std::string>("fontPath");
         spriteSize = root.get<int>("spriteSize");
 
-        for (boost::property_tree::ptree::value_type& object : root.get_child("objects")) {
-            objects.insert(std::pair<std::string, char>(object.first, object.second.data()[0]));
+        for (boost::property_tree::ptree::value_type& object : root.get_child("gameObjects")) {
+            gameObjects.insert(std::pair<std::string, char>(object.first, object.second.data()[0]));
         }
     }
 
@@ -40,7 +40,7 @@ public:
     std::string fontPath;
 
     int spriteSize;
-    std::map<std::string, char> objects;
+    std::map<std::string, char> gameObjects;
 
 private:
     GameSettings() {}
