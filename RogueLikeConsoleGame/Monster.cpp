@@ -14,6 +14,22 @@ void Monster::move(const Transform& targetPosition, std::vector<std::shared_ptr<
     if (distToPlayer <= playerVizible) {
         int dx = targetPosition.x - position.x;
         int dy = targetPosition.y - position.y;
+        if (dx < 0)
+        {
+            dx = -1;
+        }
+        else if(dx > 0)
+        {
+            dx = 1;
+        }
+        if (dy < 0)
+        {
+            dy = -1;
+        }
+        else if (dy > 0)
+        {
+            dy = 1;
+        }
 
         if (dx == 0)
             toPos = position + Transform{ 0, dy };
