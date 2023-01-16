@@ -7,14 +7,7 @@ Archer::Archer(const Transform& position, const std::shared_ptr<sf::Sprite> spri
 
 void Archer::move(const Transform& targetPosition, std::vector<std::shared_ptr<GameObject>>& gameObjects, const std::vector<std::string> map)
 {
-    int distance = (int)sqrt(pow(targetPosition.x - position.x, 2) + pow(targetPosition.y - position.y, 2));
-    if (distance <= shotDistance && arrowTick == 0) {
-        arrowTick = timer;
-    }
-    else if (distance > shotDistance)
-        arrowTick = 0;
-    else
-        --arrowTick;
+    
 }
 
 bool Archer::collide(GameObject& gameObject) {

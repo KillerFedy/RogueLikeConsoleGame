@@ -47,18 +47,18 @@ void Monster::move(const Transform& targetPosition, std::vector<std::shared_ptr<
         toPos = position + offsets[index];
     }
 
-    bool wasCollide = false;
+    bool isCollide = false;
 
     for (int i = 0; i < objects.size(); ++i) {
         if (toPos == objects[i]->getPosition())
         {
             if (!objects[i]->collide(*this)) {
-                wasCollide = true;
+                isCollide = true;
             }
         }
     }
 
-    if (!wasCollide && map[toPos.y][toPos.x] == '.')
+    if (!isCollide && map[toPos.y][toPos.x] == '.')
         position = toPos;
 }
 
