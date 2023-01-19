@@ -1,13 +1,18 @@
 #include "Archer.h"
-#include "player.h"
+#include "Player.h"
 #include <cmath>
 
 
-Archer::Archer(const Transform& position, const std::shared_ptr<sf::Sprite> sprite, const int& health, const int& damage) : GameObject(position, sprite, health, damage), arrowTick(0), timer(5), shotDistance(6) {}
+Archer::Archer(const Transform& position, const std::shared_ptr<sf::Sprite> sprite, const int& health, const int& damage) : GameObject(position, sprite, health, damage), shotDistance(6) { }
 
 void Archer::move(const Transform& targetPosition, std::vector<std::shared_ptr<GameObject>>& gameObjects, const std::vector<std::string> map)
 {
-    
+    int distance = (int)sqrt(pow(targetPosition.x - position.x, 2) + pow(targetPosition.y - position.y, 2));
+    if (distance <= shotDistance)
+    {
+        //player.hit(damage);
+        gameObjects[0].get()->hit(damage);
+    }
 }
 
 bool Archer::collide(GameObject& gameObject) {

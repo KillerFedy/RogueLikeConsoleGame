@@ -1,5 +1,6 @@
 #pragma once
 #include "GameObject.h"
+#include "Player.h"
 
 class Archer : public GameObject {
 public:
@@ -10,7 +11,5 @@ public:
     bool collide(Monster& monster) override;
     bool collide(Archer& archer) override;
 private:
-    int arrowTick;
-    int shotDistance;
-    int timer;
+    int shotDistance = 5;
 };
